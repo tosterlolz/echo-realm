@@ -1,0 +1,48 @@
+{
+	"schemaVersion": 1,
+	"id": "echo-realm",
+	"version": "${version}",
+	"name": "Echo Realm",
+	"description": "Adds a new dimension",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://toster.lol",
+		"sources": "https://github.com/tosterlolz/echorealm"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/echo-realm/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			{
+				"value": "lol.toster.echorealm.EchoRealmMod",
+				"adapter": "kotlin"
+			}
+		],
+		"client": [
+			{
+				"value": "lol.toster.echorealm.EchoRealmClient",
+				"adapter": "kotlin"
+			}
+		]
+	},
+	"mixins": [
+		"echo-realm.mixins.json",
+		{
+			"config": "echo-realm.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.14",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*",
+		"fabric-language-kotlin": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
