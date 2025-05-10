@@ -1,26 +1,61 @@
 {
-  "ultrawarm": true,
-  "natural": false,
-  "piglin_safe": true,
-  "has_skylight": false,
-  "bed_works": false,
-  "respawn_anchor_works": true,
-  "has_raids": false,
-  "logical_height": 256,
-  "height": 384,
-  "min_y": -64,
-  "coordinate_scale": 1.0,
-  "infiniburn": "#minecraft:infiniburn_nether",
-  "effects": "minecraft:the_nether",
-  "ambient_light": 0.1,
-  "fixed_time": 18000,
-  "has_ceiling": true,
-  "monster_spawn_light_level": {
-    "type": "minecraft:uniform",
-    "value": {
-      "min_inclusive": 0,
-      "max_inclusive": 7
+  "type": "echorealm:echo_realm_type",
+  "generator": {
+    "type": "minecraft:noise",
+    "seed": 213769420,
+    "settings": "minecraft:overworld",
+    "biome_source": {
+      "type": "minecraft:multi_noise",
+      "biomes": [
+        {
+          "biome": "minecraft:warped_forest",
+          "parameters": {
+            "temperature": 0.0,
+            "humidity": 0.0,
+            "continentalness": 0.0,
+            "erosion": 0.0,
+            "weirdness": 0.0,
+            "depth": 0.0,
+            "offset": 0.0
+          }
+        },
+        {
+          "biome": "minecraft:crimson_forest",
+          "parameters": {
+            "temperature": 1.0,
+            "humidity": 0.0,
+            "continentalness": 0.0,
+            "erosion": 0.0,
+            "weirdness": 0.0,
+            "depth": 0.0,
+            "offset": 0.0
+          }
+        },
+        {
+          "biome": "minecraft:basalt_deltas",
+          "parameters": {
+            "temperature": 0.0,
+            "humidity": 1.0,
+            "continentalness": 0.0,
+            "erosion": 0.0,
+            "weirdness": 0.0,
+            "depth": 0.0,
+            "offset": 0.0
+          }
+        },
+        {
+          "biome": "minecraft:soul_sand_valley",
+          "parameters": {
+            "temperature": 1.0,
+            "humidity": 1.0,
+            "continentalness": 0.0,
+            "erosion": 0.0,
+            "weirdness": 0.0,
+            "depth": 0.0,
+            "offset": 0.0
+          }
+        }
+      ]
     }
-  },
-  "monster_spawn_block_light_limit": 0
+  }
 }
