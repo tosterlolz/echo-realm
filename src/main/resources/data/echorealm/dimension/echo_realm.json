@@ -1,8 +1,0 @@
-{
-  "type": "echorealm:echo_realm",
-  "generator": {
-    "type": "minecraft:noise",
-    "seed": 213769420,
-    "settings": "minecraft:overworld"
-  }
-}

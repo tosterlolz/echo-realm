@@ -4,8 +4,7 @@ import lol.toster.echorealm.EchoRealmMod
 import net.minecraft.item.Item
 import net.minecraft.item.ItemUsageContext
 import net.minecraft.util.ActionResult
-import net.minecraft.util.Hand
-import net.minecraft.util.TypedActionResult
+import net.minecraft.util.math.BlockPos
 import net.minecraft.world.World
 
 class EchoShardItem(settings: Settings) : Item(settings) {
@@ -19,7 +18,7 @@ class EchoShardItem(settings: Settings) : Item(settings) {
         return ActionResult.FAIL
     }
 
-    private fun tryCreatePortal(world: World, pos: net.minecraft.util.math.BlockPos): Boolean {
+    private fun tryCreatePortal(world: World, pos: BlockPos): Boolean {
         // uproszczona wersja: zmienia 1 blok na portal
         world.setBlockState(pos.up(), EchoRealmMod.ECHO_PORTAL_BLOCK.defaultState)
         return true

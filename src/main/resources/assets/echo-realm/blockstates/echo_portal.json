@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "normal": {
+      "model": "echo-realm:block/echo_portal"
+    }
+  }
+}

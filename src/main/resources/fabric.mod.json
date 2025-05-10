@@ -5,11 +5,11 @@
 	"name": "Echo Realm",
 	"description": "Adds a new dimension",
 	"authors": [
-		"Me!"
+		"Tosterlolz"
 	],
 	"contact": {
 		"homepage": "https://toster.lol",
-		"sources": "https://github.com/tosterlolz/echorealm"
+		"sources": "https://github.com/tosterlolz/echo-realm"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/echo-realm/icon.png",
