@@ -8,7 +8,6 @@ import net.minecraft.registry.Registry
 import net.minecraft.util.Identifier
 import lol.toster.echorealm.block.EchoPortalBlock
 import lol.toster.echorealm.item.EchoShardItem
-import net.minecraft.block.AbstractBlock
 
 object EchoRealmMod : ModInitializer {
 
@@ -20,12 +19,12 @@ object EchoRealmMod : ModInitializer {
 	override fun onInitialize() {
 		println("Echo Realm mod initialized.")
 
-		// Register portal block
-		ECHO_PORTAL_BLOCK = EchoPortalBlock(AbstractBlock.Settings.create()) // Use AbstractBlock.Settings instead of Material
+		// Rejestracja portalu
+		ECHO_PORTAL_BLOCK = EchoPortalBlock()
 		Registry.register(Registries.BLOCK, Identifier(MOD_ID, "echo_portal"), ECHO_PORTAL_BLOCK)
 
-		// Register item
-		ECHO_SHARD_ITEM = EchoShardItem(Item.Settings()) // Basic item properties
+		// Rejestracja przedmiotu
+		ECHO_SHARD_ITEM = EchoShardItem(Item.Settings())
 		Registry.register(Registries.ITEM, Identifier(MOD_ID, "echo_shard"), ECHO_SHARD_ITEM)
 	}
 }
