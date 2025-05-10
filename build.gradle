@@ -12,21 +12,17 @@ base {
 }
 
 repositories {
-	maven {
-		url = "https://maven.kyrptonaught.dev"
-	}
+	// Add repositories to retrieve artifacts from in here.
+	// You should only use this when depending on other mods because
+	// Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
+	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
+	// for more information about repositories.
 }
 
-loom {
-	splitEnvironmentSourceSets()
-
-	mods {
-		"echo-realm" {
-			sourceSet sourceSets.main
-			sourceSet sourceSets.client
-		}
+fabricApi {
+	configureDataGeneration {
+		client = true
 	}
-
 }
 
 dependencies {
@@ -38,9 +34,6 @@ dependencies {
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 	modImplementation "net.fabricmc:fabric-language-kotlin:${project.fabric_kotlin_version}"
-
-	modImplementation 'net.kyrptonaught:customportalapi:0.0.1-beta65-1.20'
-	include 'net.kyrptonaught:customportalapi:0.0.1-beta65-1.20'
 }
 
 processResources {

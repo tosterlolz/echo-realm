@@ -3,13 +3,13 @@
 	"id": "echo-realm",
 	"version": "${version}",
 	"name": "Echo Realm",
-	"description": "Adds a new dimension",
+	"description": "This is an example description! Tell everyone what your mod is about!",
 	"authors": [
-		"Tosterlolz"
+		"Me!"
 	],
 	"contact": {
-		"homepage": "https://toster.lol",
-		"sources": "https://github.com/tosterlolz/echo-realm"
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/echo-realm/icon.png",
@@ -17,23 +17,19 @@
 	"entrypoints": {
 		"main": [
 			{
-				"value": "lol.toster.echorealm.EchoRealmMod",
+				"value": "lol.toster.echorealm.EchoRealm",
 				"adapter": "kotlin"
 			}
 		],
-		"client": [
+		"fabric-datagen": [
 			{
-				"value": "lol.toster.echorealm.EchoRealmClient",
+				"value": "lol.toster.echorealm.EchoRealmDataGenerator",
 				"adapter": "kotlin"
 			}
 		]
 	},
 	"mixins": [
-		"echo-realm.mixins.json",
-		{
-			"config": "echo-realm.client.mixins.json",
-			"environment": "client"
-		}
+		"echo-realm.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.16.14",
